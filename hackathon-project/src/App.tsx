@@ -15,6 +15,7 @@ import '@fontsource/poppins/600-italic.css';
 import '@fontsource/poppins/700-italic.css';
 import '@fontsource/poppins/800-italic.css';
 import '@fontsource/poppins/900-italic.css';
+import YourOrganization from './pages/YourOrganization'
 function App() {
 
   return (
@@ -28,7 +29,7 @@ function App() {
       <Route path='/events/:id' element={<EventsInfo/>}/>
       <Route path='/organizations' element={<Organizations/>}/>
       <Route path='/register' element={<Register/>}/>
-      <Route path='' element=''/>
+      <Route path='/your-organization' element={<YourOrganization/>}/>
      </Routes>
     </>
   )

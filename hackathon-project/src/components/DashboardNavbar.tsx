@@ -8,7 +8,7 @@ const DashboardNavbar = () => {
       <div className="flex gap-20 justify-center items-center">
         <i onClick={()=> {navigate("/dashboard")}} className="fi fi-tr-document text-white cursor-pointer"></i>
         <i onClick={()=> {navigate("/events")}} className="fi fi-sr-calendar text-white cursor-pointer"></i>
-        <i onClick={()=> {navigate("/organizations")}} className="fi fi-ss-referral-alt text-white cursor-pointer"></i>
+        <i onClick={()=> {navigate("/organizations")}} className="fi fi-ss-users-alt text-white cursor-pointer"></i>
       </div>
       <div>
         <Avatar>
