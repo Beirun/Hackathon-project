@@ -1,7 +1,8 @@
-
+import { useNavigate } from "react-router-dom"
 const OrganizationsCard = () => {
+    const navigate = useNavigate()
   return (
-    <div className="w-[80%] h-50  rounded-md flex shadow-xl shadow-gray/50">
+    <div onClick={()=> navigate('/your-organization/1')} className="w-[80%] h-50  rounded-md flex shadow-xl shadow-gray/50">
         <div className="w-[20%] h-full">
             <div style={{ backgroundImage: `url(../src/assets/logo-1.png)`, backgroundSize: "cover", backgroundPosition: "center" }} className="w-full h-full rounded-md"/>
         </div>
