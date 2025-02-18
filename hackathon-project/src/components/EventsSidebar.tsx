@@ -32,6 +32,11 @@ const DashboardSidebar = () => {
         ))}
 
       </div>
+      <div className="w-full h-2 pt-5 flex justify-center item-center"><div className="h-[2px] w-[95%] bg-gray-950 "></div></div>
+      <div>
+        <div className="text-lg font-semibold flex w-[90%] my-2 px-2 py-2">Location</div>
+        <div className="flex w-[90%] my-2 px-2 gap-2"><i className="fi fi-ss-marker"></i>Cebu City</div>
+      </div>
     </div>
   )
 }
