@@ -6,6 +6,7 @@ import Register from './pages/Register'
 import Events from './pages/Events'
 import EventsInfo from './pages/EventsInfo'
 import Organizations from './pages/Organizations'
+import Organization from './pages/Organization'
 import '@fontsource/poppins/100-italic.css';
 import '@fontsource/poppins/200-italic.css';
 import '@fontsource/poppins/300-italic.css';
@@ -30,6 +31,7 @@ function App() {
       <Route path='/organizations' element={<Organizations/>}/>
       <Route path='/register' element={<Register/>}/>
       <Route path='/your-organization' element={<YourOrganization/>}/>
+      <Route path='/your-organization/:id' element={<Organization/>}/>
      </Routes>
     </>
   )

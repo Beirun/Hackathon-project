@@ -1,5 +1,6 @@
 import DashboardNavbar from "../components/DashboardNavbar";
 import { Button } from "../components/ui/button";
+import OrganizationsCard from "../components/OrganizationsCard"
 import OrganizationsSidebar from "../components/OrganizationsSidebar";
 import {
   Dialog,
@@ -13,18 +14,25 @@ import {
 import { Input } from "../components/ui/input";
 import { useState } from "react";
 const Organizations = () => {
-  const [organizations, setOrganizations] = useState([]);
+  const [organizations, setOrganizations] = useState([1]);
 
   const [open, setOpen] = useState(false);
   return (
     <div className="flex flex-col items-end">
       <DashboardNavbar />
       <OrganizationsSidebar />
-      <div className=" w-[84vw] min:h-screen h-screen flex gap-5 justify-center items-center py-10 flex-wrap mt-10">
+      <div className=" w-[84vw] min:h-screen h-screen flex flex-col gap-5 justify-center items-center py-10 flex-wrap mt-10">
         {organizations.length === 0 ? (
           <div className="flex flex-col justify-center items-center gap-10">
             <p>You do not have any existing Organizations</p>
-            <Dialog open={open} onOpenChange={setOpen}>
+            
+          </div>
+        ) : (
+          organizations.map((organization, index) => (
+              <OrganizationsCard key={index}/>
+          ))
+        )}
+        <Dialog open={open} onOpenChange={setOpen}>
               <DialogTrigger asChild>
                 <Button>Create Organization</Button>
               </DialogTrigger>
@@ -47,10 +55,6 @@ const Organizations = () => {
                 </DialogFooter>
               </DialogContent> 
             </Dialog>
-          </div>
-        ) : (
-          <p>You do not have any existing Organizations</p>
-        )}
       </div>
     </div>
   );
