@@ -6,7 +6,7 @@ const LandingNavbar = () => {
   return (
     <div className='flex justify-between absolute w-screen h-20 items-center px-10'>
         <div>CommUnity</div>
-        <div className='flex flex-row gap-10'>
+        <div className='flex flex-row gap-10 justify-center items-center'>
             <Link to='projects' smooth={true} duration={500}>
             <button>Projects</button>
             </Link>
@@ -16,7 +16,7 @@ const LandingNavbar = () => {
             <Link to='about' smooth={true} duration={500}>
             <button>About Us</button>
             </Link>
-            <button onClick={() => {navigate("/login")}}>LOGIN</button>
+            <button className='bg-blue-mint px-4 py-2 rounded-sm' onClick={() => {navigate("/login")}}>LOGIN</button>
         </div>
     </div>
   )

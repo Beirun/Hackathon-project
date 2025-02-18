@@ -4,7 +4,7 @@ import { projects} from "../library/projects"
 import {partners} from "../library/partners"
 import PartnersCard from "../components/PartnersCard"
 import { Element } from "react-scroll"
-
+import {Avatar, AvatarImage} from "../components/ui/avatar"
 
 const Landing = () => {
   return (
@@ -26,7 +26,7 @@ const Landing = () => {
         </div>
     </div>
     <Element name='projects'>
-        <div  className="w-screen h-screen bg-[#e4e4e4] flex justify-evenly">
+        <div  className="w-screen h-screen bg-blue-mint flex justify-evenly">
 
         {projects.map((project, index) => (<ProjectsCard key={index} title={project[0]} description={project[1]} path={"../src/assets/projects-"+(index+1)+".jpg"}/>))}
         </div>
@@ -38,8 +38,37 @@ const Landing = () => {
         </div>
     </Element>
     <Element name='about'>
-    <div  className="w-screen h-screen bg-[#f1f1f1]">
-
+    <div  className="w-screen h-screen bg-[#f1f1f1] flex justify-center items-center flex-col">
+        <p className="text-9xl font-bold text-blue-mint">EGO</p>
+        <div className="flex gap-50 p-20">
+        <div className="flex flex-col justify-center items-center">
+            <Avatar>
+                <AvatarImage
+                    src="../src/assets/avatar.jpg"
+                  alt="Avatar image"
+                />
+              </Avatar>
+              <p className="text-3xl">Mark Jess Anthony Enfermo</p>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+            <Avatar>
+                <AvatarImage
+                    src="../src/assets/avatar.jpg"
+                  alt="Avatar image"
+                />
+              </Avatar>
+              <p className="text-3xl">Bryl Darrel Gorgonio</p>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+            <Avatar>
+                <AvatarImage
+                    src="../src/assets/avatar.jpg"
+                  alt="Avatar image"
+                />
+              </Avatar>
+              <p className="text-3xl">Bernard Jay Orillo</p>
+            </div>
+        </div>
     </div>
     </Element>
     </>
