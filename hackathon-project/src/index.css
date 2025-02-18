@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:is(.dark *));
 
 body{
     margin: 0;
@@ -11,4 +14,15 @@ body{
     --font-poppins: 'Poppins', sans-serif;
     --color-blue-mint: rgba(0, 169, 216, 1);
 
+}
+
+:root {
+    --radius: 0.6rem;
+}
+
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
 }
